@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-narrow {
+    @apply max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
