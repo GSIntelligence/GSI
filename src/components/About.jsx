@@ -14,7 +14,7 @@ export const About = () => {
               that doesn't fit your needs. That's where we come in.
             </p>
             <p className="text-body-lg text-muted-foreground mb-6">
-              Since 2015, we've been helping business owners just like you replace 
+              With experience dating back to 2015, we help business owners replace 
               clunky spreadsheets and disconnected tools with simple, custom-built 
               solutions that actually work the way you do.
             </p>
