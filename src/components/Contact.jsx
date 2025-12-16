@@ -20,17 +20,17 @@ export const Contact = () => {
               <div className="p-4 rounded-lg bg-primary-100 flex-shrink-0">
                 <Mail className="text-primary-600" size={32} />
               </div>
-              <div>
+              <div className="flex-1 min-w-0">
                 <h3 className="font-display text-2xl text-foreground mb-3">Email Us</h3>
                 <p className="text-body-md text-muted-foreground mb-4">
                   Send us an email anytime and we'll respond within 24 hours.
                 </p>
                 <a
                   href="mailto:granitestateintelligence@gmail.com"
-                  className="text-primary-600 hover:text-primary-700 font-semibold text-lg inline-flex items-center gap-2 transition-colors"
+                  className="text-primary-600 hover:text-primary-700 font-semibold text-lg inline-flex items-center gap-2 transition-colors break-words break-all"
                 >
                   granitestateintelligence@gmail.com
-                  <Mail className="inline" size={20} />
+                  <Mail className="inline flex-shrink-0" size={20} />
                 </a>
               </div>
             </div>
