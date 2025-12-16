@@ -1,21 +1,21 @@
-import { Quote } from 'lucide-react'
+import { TrendingDown, Shield, RefreshCw } from 'lucide-react'
 
 export const Testimonials = () => {
-  const testimonials = [
+  const results = [
     {
-      name: 'Robert Chen',
-      business: 'Chen Manufacturing Co.',
-      text: 'GSI built us a custom inventory system that replaced three different spreadsheets. Now everything is in one place, and when we need changes, they respond within hours—not days. It\'s been a game-changer for our operations.',
+      icon: TrendingDown,
+      title: '95% Reduction in Manual Labor',
+      description: 'Built a cash remittance application that automated workflows, saving hundreds of manual hours and reducing errors.',
     },
     {
-      name: 'Maria Rodriguez',
-      business: 'Rodriguez Family Restaurant',
-      text: 'We\'ve been working with GSI for five years now. They built our ordering system and handle all our updates. What I love most is that they explain everything in plain English. No tech talk, just clear answers.',
+      icon: Shield,
+      title: 'Compliance You Can Trust',
+      description: 'Designed and maintained GDPR and HIPAA-compliant databases for sensitive business operations.',
     },
     {
-      name: 'James Thompson',
-      business: 'Thompson Auto Repair',
-      text: 'The team at GSI understood our workflow from day one. They created a system that tracks our customers, appointments, and parts inventory—all integrated. The maintenance support has been excellent. Highly recommend.',
+      icon: RefreshCw,
+      title: 'Reliability for Repetitive Tasks',
+      description: 'Specialized systems that eliminate repetitive manual processes, ensuring auditability and low ongoing maintenance.',
     },
   ]
 
@@ -24,29 +24,33 @@ export const Testimonials = () => {
       <div className="container-narrow mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-display text-display-md text-foreground mb-4">
-            What Our Clients Say
+            Proven Results That Drive Efficiency
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Real feedback from business owners we've worked with
+            Real outcomes from solutions we've built for businesses like yours
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-background rounded-xl p-6 shadow-sm border border-border/50 flex flex-col"
-            >
-              <Quote className="text-primary-400 mb-4" size={32} />
-              <p className="text-body-md text-muted-foreground mb-6 flex-grow leading-relaxed">
-                "{testimonial.text}"
-              </p>
-              <div className="border-t border-border/50 pt-4">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.business}</p>
+          {results.map((result, index) => {
+            const Icon = result.icon
+            return (
+              <div
+                key={index}
+                className="bg-background rounded-xl p-6 shadow-sm border border-border/50 flex flex-col"
+              >
+                <div className="p-3 rounded-lg bg-primary-100 w-fit mb-4">
+                  <Icon className="text-primary-600" size={32} />
+                </div>
+                <h3 className="font-display text-xl text-foreground mb-4">
+                  {result.title}
+                </h3>
+                <p className="text-body-md text-muted-foreground flex-grow leading-relaxed">
+                  {result.description}
+                </p>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
